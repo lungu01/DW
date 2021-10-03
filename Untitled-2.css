@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+
+
+}
+.col_1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24%;
+
+}
+
+.col_2{
+    display: flex;
+    flex-direction: column;
+    width: 74%;
+}
+
+.img img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.img{
+    display: flex;
+    justify-content: center;
+}
+
+.main_img{
+    width: 50%;
+    height: auto;
+}
+
+.cuprins{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 5px;
+
+}
+.cuprins a{
+    font-size: 30px;
+    font-family: 'Dancing Script', cursive;
+    color:#000;
+    text-decoration: none;
+    padding: zpx 20px;
+    border: 1px solid #000;
+}
+.text{
+    color:#0099ff;
+    font-family: 'Koh Santepheap', cursive;
+}
+.title{
+    display: block;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 70px;
+    font-style: italic;
+    font-weight: 700;

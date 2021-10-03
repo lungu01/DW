@@ -1,0 +1,11 @@
+.titlu{
+    text-align: center;
+    font-family: 'Work Sans', sans-serif;
+}.text{
+    font-family: 'Work Sans', sans-serif;
+    color: black;
+}
+.img{
+    display:flex;
+    justify-content: center;
+}
