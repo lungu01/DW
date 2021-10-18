@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    height: 100vh;
+    background-color: #ffcccc;
+}
+.title{
+    display: block;
+    text-align: center;
+    margin-top: 10vh;
+    font-family: 'Dancing Script', cursive;
+    font-size: 70px;
+    font-style: italic;
+    font-weight: 700;
+
+}
+ul{
+    /* float: right; Acest stil lipeste de partea de partea stinga */
+    list-style-type: none;
+    margin-top: 25px;
+
+    
+    /* Acesta e pe centru */
+    display: flex;
+    justify-content: center;
+    /* Acesta e pe centru */
+
+
+}
+ul li{
+    display: inline-block;
+}
+ul li a{
+    text-decoration: none;
+    color: #000;
+    padding: 5px 20px;
+    border: 1px solid #000;
+}
+ul li a:hover{
+    background-color: #000;
+    color:#000;
+}
+
+.porc-box{
+    display: flex;
+}
+.porc{
+    margin: 8vh auto;
+}
+.video{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
