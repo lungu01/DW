@@ -1,28 +1,23 @@
-var slideIndex = 1;
-showSlides(slideIndex);
+const secondHand = document.querySelector(".second-hand");
+const minsHand = document.querySelector(".min-hand");
+const hourHand = document.querySelector(".hour-hand");
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+function setDate() {
+  const now = new Date();
+
+  const seconds = now.getSeconds();
+  const secondsDegrees = seconds / 60 * 360 + 90;
+  secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
+
+  const mins = now.getMinutes();
+  const minsDegrees = mins / 60 * 360 + seconds / 60 * 6 + 90;
+  minsHand.style.transform = `rotate(${minsDegrees}deg)`;
+
+  const hour = now.getHours();
+  const hourDegrees = hour / 12 * 360 + mins / 60 * 30 + 90;
+  hourHand.style.transform = `rotate(${hourDegrees}deg)`;
 }
 
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+setInterval(setDate, 1000);
 
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
+setDate();
